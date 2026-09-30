@@ -1,0 +1,6 @@
+{
+  "name": "青楓高中 智慧福利社銷售與庫存管理系統",
+  "description": "專為高中生量身打造的福利社自助結帳POS、銷售趨勢分析、毛利率與口味偏好分析、自動補貨與下架淘汰決策看板。",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

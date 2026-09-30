@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0",
+  "entities": {
+    "products": {
+      "collection": "products",
+      "description": "高中福利社商品庫存與設定",
+      "fields": {
+        "id": { "type": "string" },
+        "barcode": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "cost": { "type": "number" },
+        "stock": { "type": "number" },
+        "reorderThreshold": { "type": "number" },
+        "suggestedRestockQty": { "type": "number" },
+        "dailyAvgSales": { "type": "number" },
+        "totalSold": { "type": "number" },
+        "shelfLifeDays": { "type": "number" },
+        "wastageCount": { "type": "number" },
+        "iconName": { "type": "string" },
+        "timeSlotAffinity": { "type": "array" },
+        "flavor": { "type": "string" },
+        "isSeasonal": { "type": "boolean" },
+        "seasonalTag": { "type": "string" },
+        "isClearance": { "type": "boolean" },
+        "clearancePrice": { "type": "number" },
+        "isDelisted": { "type": "boolean" },
+        "description": { "type": "string" }
+      }
+    },
+    "students": {
+      "collection": "students",
+      "description": "學生會員與福利點數帳戶",
+      "fields": {
+        "studentId": { "type": "string" },
+        "name": { "type": "string" },
+        "gradeClass": { "type": "string" },
+        "points": { "type": "number" },
+        "totalSpent": { "type": "number" },
+        "cardBalance": { "type": "number" },
+        "avatarColor": { "type": "string" },
+        "registeredDate": { "type": "string" }
+      }
+    },
+    "promotions": {
+      "collection": "promotions",
+      "description": "促銷活動與節慶特惠",
+      "fields": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string" },
+        "discountPercent": { "type": "number" },
+        "pointsMultiplier": { "type": "number" },
+        "targetCategory": { "type": "string" },
+        "timeSlotOnly": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "tagText": { "type": "string" },
+        "bannerColor": { "type": "string" }
+      }
+    },
+    "daily_summaries": {
+      "collection": "daily_summaries",
+      "description": "每日銷售與毛利率總結",
+      "fields": {
+        "date": { "type": "string" },
+        "totalRevenue": { "type": "number" },
+        "totalCost": { "type": "number" },
+        "grossProfit": { "type": "number" },
+        "marginPercent": { "type": "number" },
+        "orderCount": { "type": "number" },
+        "itemsSoldCount": { "type": "number" },
+        "wastageLoss": { "type": "number" }
+      }
+    },
+    "transactions": {
+      "collection": "transactions",
+      "description": "學生自助結帳交易紀錄",
+      "fields": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "dateStr": { "type": "string" },
+        "studentId": { "type": "string" },
+        "studentName": { "type": "string" },
+        "items": { "type": "array" },
+        "totalAmount": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "pointsEarned": { "type": "number" },
+        "pointsUsed": { "type": "number" },
+        "timeSlot": { "type": "string" },
+        "grossProfit": { "type": "number" }
+      }
+    }
+  }
+}

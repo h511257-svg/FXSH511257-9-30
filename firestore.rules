@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 青楓高中福利社 (High School Welfare Store) Firestore Rules
+
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /students/{studentId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /promotions/{promoId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /daily_summaries/{summaryId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /transactions/{transactionId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if true;
+    }
+  }
+}
